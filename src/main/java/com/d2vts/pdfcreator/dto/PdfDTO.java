@@ -5,9 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-/**
- * 체크 박스의 경우 영대문자 V를 둘중 해당하는곳에 넣는것으로
- */
+
 public class PdfDTO {
 
     // 접수번호
@@ -22,6 +20,8 @@ public class PdfDTO {
     private String businessRegistrationNo;
     // 성명
     private String name;
+    // 서명 옆 성명
+    private String name2;
     // 생년월일
     private String dateOfBirth;
     // 사무실 소재지
@@ -46,13 +46,15 @@ public class PdfDTO {
     // 신청 일( 해당 일자의 일 )
     private String regDay;
 
-    // 국내 국외 CheckBox
+    // 국내 국외 CheckBox 사용시 방법 변경도 가능
+    private String area; // 여기에 domestic 혹은 oversea 넣어서 체크하는 방법 존재
         // 국내
     private String domestic;
         // 국외
     private String oversea;
 
     // 용도 CheckBox
+    private String purposeChkBox;
         // 시험.연구용
     private String research;
         // 그 밖의 용도
